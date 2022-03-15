@@ -5,3 +5,5 @@ install:
   - npm install
 script:
   - nyc ./node_modules/mocha/bin/_mocha test --recursive -R min --timeout 7500 --no-warnings  --no-deprecation
+after_script:
+  - npm run coverage
